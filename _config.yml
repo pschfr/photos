@@ -1,0 +1,25 @@
+# Welcome to Jekyll!
+# https://github.com/pschfr/photos
+
+title: Photos
+tagline: Selected photos taken by Paul Schaefer
+email: yeppaul2@gmail.com
+description: 
+baseurl: ""
+url: "https://paultakes.photos"
+
+includes:
+- pages
+- photos
+
+exclude:
+- node_modules
+- gulpfile.js
+- README.md
+- LICENSE
+
+sass:
+    style: compressed
+
+# The HTML is compressed via _layouts/compress.html
+# http://jch.penibelst.de/

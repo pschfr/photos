@@ -1,2 +1,5 @@
 node_modules
 gulpfile.js
+_site
+.sass-cache
+.jekyll-metadata

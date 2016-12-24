@@ -7,3 +7,14 @@
 		</div>
 	</div>
 </footer>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js" async></script>
+<script type="text/javascript">
+	window.onload = function() {
+		baguetteBox.run('.gallery', {
+			async: true,
+			captions: function(element) {
+				return element.getElementsByTagName('img')[0].alt;
+			}
+		});
+	};
+</script>

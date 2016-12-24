@@ -17,5 +17,8 @@ exclude:
 sass:
     style: compressed
 
+gems:
+- instagram
+
 # The HTML is compressed via _layouts/compress.html
 # http://jch.penibelst.de/

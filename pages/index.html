@@ -3,6 +3,11 @@ layout: default
 title: "Home"
 permalink: "/"
 ---
-<section>
-	<p>Test content</p>
-</section>
+{% if site.categories['test'] %}
+	<section id="test">
+		{% for item in site.categories['test'] %}
+			<h3>{{ item.title }}</h3>
+			{{ item.content }}
+		{% endfor %}
+	</section>
+{% endif %}

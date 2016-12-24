@@ -3,12 +3,17 @@ layout: default
 title: "Home"
 permalink: "/"
 ---
-<ul id="sunset" class="gallery">
+<ul class="gallery">
+<!-- forloop.index <= 10 -->
+<!-- item.tags contains 'sunset' -->
 {% instagram accesstokenpath:_plugins/instagram-access-token.txt %}
-	<li>
-		<a href="{{ item.images.standard_resolution.url }}">
-			<img src="{{ item.images.thumbnail.url }}" alt="{{ item.caption.text }}<br/>{{ item.likes.count }} likes, {{ item.comments.count }} comments" />
-		</a>
-	</li>
+	{% if forloop.index <= 10 %}
+		<li>
+			<a href="{{ item.images.standard_resolution.url }}">
+				<img src="{{ item.images.thumbnail.url }}" alt="{{ item.caption.text }}<br/>{{ item.likes.count }} likes, {{ item.comments.count }} comments" />
+			</a>
+		</li>
+	{% endif %}
 {% endinstagram %}
 </ul>
+<p><a href="https://instagram.com/pschfr">I'm @pschfr on Instagram</a></p>

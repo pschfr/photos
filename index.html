@@ -1,0 +1,14 @@
+---
+layout: default
+title: "Home"
+permalink: "/"
+---
+<ul id="sunset" class="gallery">
+{% instagram accesstokenpath:_plugins/instagram-access-token.txt %}
+	<li>
+		<a href="{{ item.images.standard_resolution.url }}">
+			<img src="{{ item.images.thumbnail.url }}" alt="{{ item.caption.text }}<br/>{{ item.likes.count }} likes, {{ item.comments.count }} comments" />
+		</a>
+	</li>
+{% endinstagram %}
+</ul>

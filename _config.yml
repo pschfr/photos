@@ -19,7 +19,7 @@ exclude:
 - LICENSE
 
 sass:
-    style: compressed
+    #style: compressed
 
 # The HTML is compressed via _layouts/compress.html
 # http://jch.penibelst.de/

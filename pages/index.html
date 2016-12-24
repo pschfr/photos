@@ -4,11 +4,12 @@ title: "Home"
 permalink: "/"
 ---
 {% if site.categories['test'] %}
-	<section id="test">
+	<ul id="test">
 		{% for item in site.categories['test'] %}
-			<h3>{{ item.title }}</h3>
-			<img src="{{ site.baseurl }}/photos/{{ item.photo }}" alt="{{ item.content | strip_html | strip_newlines }}" />
-			{{ item.content }}
+			<li>
+				<img src="{{ site.baseurl }}/photos/{{ item.photo }}" alt="{{ item.content | strip_html | strip_newlines }}" />
+				{{ item.content }}
+			</li>
 		{% endfor %}
-	</section>
+	</ul>
 {% endif %}

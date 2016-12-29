@@ -4,16 +4,13 @@ title: "Home"
 permalink: "/"
 ---
 <ul class="gallery">
-<!-- forloop.index <= 10 -->
-<!-- item.tags contains 'sunset' -->
 {% instagram accesstokenpath:_plugins/instagram-access-token.txt %}
-	{% if forloop.index <= 10 %}
+	{% if item.tags contains 'selected' %}
 		<li>
 			<a href="{{ item.images.standard_resolution.url }}">
-				<img src="{{ item.images.thumbnail.url }}" alt="{{ item.caption.text }}<br/>{{ item.likes.count }} likes, {{ item.comments.count }} comments" width="150" height="150" />
+				<img src="{{ item.images.thumbnail.url }}" alt="{% if item.caption.text %}{{ item.caption.text }}<br/>{% endif %}{{ item.likes.count }} likes, {{ item.comments.count }} comments" width="150" height="150" />
 			</a>
 		</li>
 	{% endif %}
 {% endinstagram %}
 </ul>
-<p><a href="https://instagram.com/pschfr">I'm @pschfr on Instagram</a></p>
